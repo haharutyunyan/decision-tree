@@ -1,0 +1,17 @@
+{
+  "name": "decision-tree",
+  "version": "1.0.0",
+  "description": "A decision tree processing backend in TypeScript for defining and executing business logic",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && npm run start"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}

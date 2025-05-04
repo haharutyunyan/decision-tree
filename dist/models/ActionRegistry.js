@@ -1,0 +1,11 @@
+import { ActionType, registerActionFactory } from './Action.js';
+import { SendSmsAction } from '../actions/SendSmsAction.js';
+import { SendEmailAction } from '../actions/SendEmailAction.js';
+import { ConditionAction } from '../actions/ConditionAction.js';
+import { LoopAction } from '../actions/LoopAction.js';
+import { SequenceAction } from '../actions/SequenceAction.js';
+registerActionFactory(ActionType.SEND_SMS, ((json) => SendSmsAction.fromJSON(json)));
+registerActionFactory(ActionType.SEND_EMAIL, ((json) => SendEmailAction.fromJSON(json)));
+registerActionFactory(ActionType.CONDITION, ((json) => ConditionAction.fromJSON(json)));
+registerActionFactory(ActionType.LOOP, ((json) => LoopAction.fromJSON(json)));
+registerActionFactory(ActionType.SEQUENCE, ((json) => SequenceAction.fromJSON(json)));
